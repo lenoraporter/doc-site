@@ -2,7 +2,8 @@ import React from "react";
 import { FaPencilAlt } from "react-icons/fa";
 
 const EditOnGitHub = ({ filePath }) => {
-	const repoUrl = "https://github.com/your-repo/your-project/edit/main/docs";
+	const repoUrl =
+		"https://github.com/lenoraporter/docs-site/edit/master/public/";
 	const editUrl = `${repoUrl}/${filePath}`;
 
 	return (
