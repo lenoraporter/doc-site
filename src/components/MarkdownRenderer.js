@@ -19,7 +19,7 @@ const MarkdownRenderer = ({ filePath }) => {
 
 	return (
 		<div>
-			<h2 className="text-2xl font-bold">{meta.title}</h2>
+			<h2 className="text-4xl font-bold">{meta.title}</h2>
 			<p className="text-gray-700">{meta.description}</p>
 			<ReactMarkdown>{content}</ReactMarkdown>
 		</div>
