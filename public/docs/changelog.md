@@ -1,11 +1,7 @@
 ---
 title: Changelog
-description: List of changes and updates in the project.
+description: Here are the latest updates and changes to the project.
 ---
-
-# Changelog
-
-Here are the latest updates and changes to the project.
 
 ## v1.0.1
 

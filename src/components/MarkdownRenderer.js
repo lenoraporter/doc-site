@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import matter from "gray-matter";
+import EditOnGitHub from "./EditOnGitHub";
 
 const MarkdownRenderer = ({ filePath }) => {
 	const [content, setContent] = useState("");
@@ -19,10 +20,14 @@ const MarkdownRenderer = ({ filePath }) => {
 
 	return (
 		<div className="prose prose-lg mx-auto p-4">
-			{/* <h1 className="scroll-m-20 text-4xl font-bold tracking-tight">
-				{meta.title}
-			</h1>
-			<p className="text-gray-700">{meta.description}</p> */}
+			<div className="flex  justify-between items-center mb-4">
+				<div>
+					<h1 className="mb-3 text-5xl font-extrabold">{meta.title}</h1>
+					<p className="text-gray-700 mt-2 mb-2">{meta.description}</p>
+				</div>
+				<EditOnGitHub filePath={`docs/${filePath}`} />
+			</div>
+			<hr className="mb-16 mt-2" />
 			<ReactMarkdown>{content}</ReactMarkdown>
 		</div>
 	);

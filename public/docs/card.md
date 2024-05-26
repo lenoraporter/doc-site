@@ -1,11 +1,9 @@
 ---
 title: Card Component
-description: Documentation for the Card component.
+description: The Card component is used to display content and actions on a single topic.
 ---
 
-# Card Component
-
-The Card component is used to display content and actions on a single topic. Cards are useful for displaying a variety of content, including images, text, and interactive elements.
+Cards are useful for displaying a variety of content, including images, text, and interactive elements.
 
 ## Usage
 

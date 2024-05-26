@@ -1,11 +1,7 @@
 ---
 title: How to Contribute
-description: Guidelines for contributing to the project.
+description: We welcome contributions from the community. Follow these steps to get started.
 ---
-
-# How to Contribute
-
-We welcome contributions from the community. Follow these steps to get started:
 
 ## Getting Started
 

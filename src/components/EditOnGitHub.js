@@ -7,7 +7,7 @@ const EditOnGitHub = ({ filePath }) => {
 	const editUrl = `${repoUrl}${filePath}`;
 
 	return (
-		<div className="flex justify-end mb-4">
+		<div className="flex justify-end">
 			<a
 				href={editUrl}
 				target="_blank"

@@ -1,11 +1,7 @@
 ---
 title: Badge Component
-description: Documentation for the Badge component.
+description: The Badge component is used to display a small status descriptor, often used to highlight specific statuses or counts.
 ---
-
-# Badge Component
-
-The Badge component is used to display a small status descriptor, often used to highlight specific statuses or counts.
 
 ## Usage
 

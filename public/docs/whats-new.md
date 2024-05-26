@@ -3,8 +3,6 @@ title: What's New
 description: Highlights of the latest features and updates.
 ---
 
-# What's New
-
 ## New Features in v1.0.2
 
 - **Dark Mode:** Users can now switch to a dark theme.
