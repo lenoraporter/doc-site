@@ -1,46 +1,66 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
 	return (
-		<aside className="bg-gray-800 text-white p-4 fixed top-14 z-30 -ml-2 hidden h-[calc(100vh-3.5rem)] w-full shrink-0 md:sticky md:block">
-			<h2 className="text-xl font-bold mb-4">Documentation</h2>
-			<nav class="relative overflow-hidden h-full py-6 pr-6 lg:py-8">
+		<aside className="w-64 bg-gray-800 text-white p-4">
+			<nav>
 				<ul>
 					<li>
-						<Link to="/docs/changelog" className="hover:underline">
+						<NavLink
+							to="/docs/changelog"
+							className="block py-2 px-3 hover:bg-gray-700 rounded"
+						>
 							Changelog
-						</Link>
+						</NavLink>
 					</li>
 					<li>
-						<Link to="/docs/whats-new" className="hover:underline">
+						<NavLink
+							to="/docs/whats-new"
+							className="block py-2 px-3 hover:bg-gray-700 rounded"
+						>
 							What's New
-						</Link>
+						</NavLink>
 					</li>
 					<li>
-						<Link to="/docs/how-to-contribute" className="hover:underline">
+						<NavLink
+							to="/docs/how-to-contribute"
+							className="block py-2 px-3 hover:bg-gray-700 rounded"
+						>
 							How to Contribute
-						</Link>
+						</NavLink>
 					</li>
 					<li>
-						<Link to="/docs/avatar" className="hover:underline">
+						<NavLink
+							to="/docs/avatar"
+							className="block py-2 px-3 hover:bg-gray-700 rounded"
+						>
 							Avatar
-						</Link>
+						</NavLink>
 					</li>
 					<li>
-						<Link to="/docs/buttons" className="hover:underline">
+						<NavLink
+							to="/docs/buttons"
+							className="block py-2 px-3 hover:bg-gray-700 rounded"
+						>
 							Buttons
-						</Link>
+						</NavLink>
 					</li>
 					<li>
-						<Link to="/docs/badge" className="hover:underline">
+						<NavLink
+							to="/docs/badge"
+							className="block py-2 px-3 hover:bg-gray-700 rounded"
+						>
 							Badge
-						</Link>
+						</NavLink>
 					</li>
 					<li>
-						<Link to="/docs/card" className="hover:underline">
+						<NavLink
+							to="/docs/card"
+							className="block py-2 px-3 hover:bg-gray-700 rounded"
+						>
 							Card
-						</Link>
+						</NavLink>
 					</li>
 				</ul>
 			</nav>

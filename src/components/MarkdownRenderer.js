@@ -18,9 +18,11 @@ const MarkdownRenderer = ({ filePath }) => {
 	}, [filePath]);
 
 	return (
-		<div>
-			<h2 className="text-4xl font-bold">{meta.title}</h2>
-			<p className="text-gray-700">{meta.description}</p>
+		<div className="prose prose-lg mx-auto p-4">
+			{/* <h1 className="scroll-m-20 text-4xl font-bold tracking-tight">
+				{meta.title}
+			</h1>
+			<p className="text-gray-700">{meta.description}</p> */}
 			<ReactMarkdown>{content}</ReactMarkdown>
 		</div>
 	);
