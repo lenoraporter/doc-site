@@ -14,7 +14,7 @@ const DocumentationPage = () => {
 			<Sidebar />
 			<main className="flex-1 p-6 bg-white overflow-y-auto">
 				<MarkdownRenderer filePath={filePath} />
-				<EditOnGitHub filePath={filePath} />
+				<EditOnGitHub filePath={`docs/${slug}.md`} />
 			</main>
 		</Layout>
 	);

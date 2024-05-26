@@ -4,7 +4,7 @@ import { FaPencilAlt } from "react-icons/fa";
 const EditOnGitHub = ({ filePath }) => {
 	const repoUrl =
 		"https://github.com/lenoraporter/docs-site/edit/master/public/";
-	const editUrl = `${repoUrl}/${filePath}`;
+	const editUrl = `${repoUrl}${filePath}`;
 
 	return (
 		<div className="flex justify-end mb-4">
