@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom styles */
+/* Custom styles for dark mode */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -15,4 +15,54 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.prose-dark {
+  --tw-prose-body: #d1d5db;
+  --tw-prose-headings: #f9fafb;
+  --tw-prose-lead: #d1d5db;
+  --tw-prose-links: #93c5fd;
+  --tw-prose-bold: #f9fafb;
+  --tw-prose-counters: #d1d5db;
+  --tw-prose-bullets: #d1d5db;
+  --tw-prose-hr: #374151;
+  --tw-prose-quotes: #9ca3af;
+  --tw-prose-quote-borders: #4b5563;
+  --tw-prose-captions: #9ca3af;
+  --tw-prose-code: #d1d5db;
+  --tw-prose-pre-code: #f9fafb;
+  --tw-prose-pre-bg: #1f2937;
+  --tw-prose-th-borders: #4b5563;
+  --tw-prose-td-borders: #374151;
+}
+
+.prose-dark h1,
+.prose-dark h2,
+.prose-dark h3,
+.prose-dark h4,
+.prose-dark h5,
+.prose-dark h6 {
+  color: var(--tw-prose-headings);
+}
+
+a.anchor {
+  text-decoration: none;
+  color: inherit;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.anchor svg {
+  display: inline;
+  vertical-align: middle;
 }

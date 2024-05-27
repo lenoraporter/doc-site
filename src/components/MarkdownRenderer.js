@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import rehypeSlug from "rehype-slug";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import matter from "gray-matter";
-import EditOnGitHub from "./EditOnGitHub";
+import PageHead from "./PageHead";
 
 const MarkdownRenderer = ({ filePath }) => {
 	const [content, setContent] = useState("");
@@ -18,17 +21,34 @@ const MarkdownRenderer = ({ filePath }) => {
 		fetchData();
 	}, [filePath]);
 
+	const editUrl = `https://github.com/lenoraporter/docs-site/edit/master/public/docs/${filePath}`;
+
 	return (
 		<div className="prose prose-lg mx-auto p-4">
-			<div className="flex  justify-between items-center mb-4">
-				<div>
-					<h1 className="mb-3 text-5xl font-extrabold">{meta.title}</h1>
-					<p className="text-gray-700 mt-2 mb-2">{meta.description}</p>
-				</div>
-				<EditOnGitHub filePath={`docs/${filePath}`} />
-			</div>
-			<hr className="mb-16 mt-2" />
-			<ReactMarkdown>{content}</ReactMarkdown>
+			<PageHead
+				title={meta.title}
+				description={meta.description}
+				editUrl={editUrl}
+			/>
+			<hr className="mb-6" />
+			<ReactMarkdown
+				remarkPlugins={[remarkGfm]}
+				rehypePlugins={[
+					rehypeSlug,
+					[
+						rehypeAutolinkHeadings,
+						{
+							behavior: "append",
+							properties: { className: "anchor" },
+							content: () => (
+								<div className="ml-2 inline-block text-gray-500 hover:text-gray-700" />
+							),
+						},
+					],
+				]}
+			>
+				{content}
+			</ReactMarkdown>
 		</div>
 	);
 };
