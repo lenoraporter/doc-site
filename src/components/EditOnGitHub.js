@@ -7,15 +7,15 @@ const EditOnGitHub = ({ filePath }) => {
 	const editUrl = `${repoUrl}${filePath}`;
 
 	return (
-		<div className="flex justify-end">
+		<div className="flex justify-end mb-4">
 			<a
 				href={editUrl}
 				target="_blank"
 				rel="noopener noreferrer"
-				className="flex items-center text-blue-600 hover:underline"
+				className="flex items-center text-blue-600"
 			>
 				<FaPencilAlt className="mr-2" />
-				Edit on GitHub
+				Edit
 			</a>
 		</div>
 	);
