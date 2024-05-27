@@ -45,24 +45,22 @@ code {
   color: var(--tw-prose-headings);
 }
 
-a.anchor {
+a.anchor-link {
   text-decoration: none;
   color: inherit;
-  opacity: 0;
   transition: opacity 0.2s;
 }
 
-h1:hover a.anchor,
-h2:hover a.anchor,
-h3:hover a.anchor,
-h4:hover a.anchor,
-h5:hover a.anchor,
-h6:hover a.anchor {
+h1:hover a.anchor-link,
+h2:hover a.anchor-link,
+h3:hover a.anchor-link,
+h4:hover a.anchor-link,
+h5:hover a.anchor-link,
+h6:hover a.anchor-link {
   opacity: 1;
   text-decoration: underline;
 }
 
-.anchor svg {
-  display: inline;
-  vertical-align: middle;
+.group:hover .anchor-link {
+  opacity: 1;
 }

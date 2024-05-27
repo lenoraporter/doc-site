@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeSlug from "rehype-slug";
-import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import matter from "gray-matter";
 import PageHead from "./PageHead";
+import { H1, H2, H3, H4, H5, H6 } from "./CustomHeading";
 
 const MarkdownRenderer = ({ filePath }) => {
 	const [content, setContent] = useState("");
@@ -33,19 +33,15 @@ const MarkdownRenderer = ({ filePath }) => {
 			<hr className="mb-6" />
 			<ReactMarkdown
 				remarkPlugins={[remarkGfm]}
-				rehypePlugins={[
-					rehypeSlug,
-					[
-						rehypeAutolinkHeadings,
-						{
-							behavior: "append",
-							properties: { className: "anchor" },
-							content: () => (
-								<div className="ml-2 inline-block text-gray-500 hover:text-gray-700" />
-							),
-						},
-					],
-				]}
+				rehypePlugins={[rehypeSlug]}
+				components={{
+					h1: H1,
+					h2: H2,
+					h3: H3,
+					h4: H4,
+					h5: H5,
+					h6: H6,
+				}}
 			>
 				{content}
 			</ReactMarkdown>
