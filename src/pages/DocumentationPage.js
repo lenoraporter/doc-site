@@ -11,7 +11,7 @@ const DocumentationPage = () => {
 	return (
 		<Layout>
 			<Sidebar />
-			<main className="flex-1 p-6 bg-white overflow-y-auto">
+			<main className="flex-1 p-6 overflow-y-auto">
 				<MarkdownRenderer filePath={filePath} />
 			</main>
 		</Layout>

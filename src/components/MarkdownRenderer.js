@@ -24,7 +24,7 @@ const MarkdownRenderer = ({ filePath }) => {
 	const editUrl = `https://github.com/lenoraporter/docs-site/edit/master/public/docs/${filePath}`;
 
 	return (
-		<div className="prose prose-lg mx-auto p-4">
+		<div className="prose prose-lg dark:prose-dark mx-auto p-4">
 			<PageHead
 				title={meta.title}
 				description={meta.description}
